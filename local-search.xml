@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>hexo常见操作</title>
+    <link href="/2022/05/04/hexo%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/"/>
+    <url>/2022/05/04/hexo%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo常见操作"><a href="#Hexo常见操作" class="headerlink" title="Hexo常见操作"></a>Hexo常见操作</h1><h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><p>hexo new post 测试文章 可以简写为 hexo n</p><h2 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h2><p>hexo server </p><h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><p>hexo deploy 可以简写为 hexo d。 -g 选项，指定生成后部署 与hexo g -d 等价</p><h2 id="清理缓存"><a href="#清理缓存" class="headerlink" title="清理缓存"></a>清理缓存</h2><p>heco clean</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>-Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>-原创</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>测试文章</title>
     <link href="/2022/05/04/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     <url>/2022/05/04/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
