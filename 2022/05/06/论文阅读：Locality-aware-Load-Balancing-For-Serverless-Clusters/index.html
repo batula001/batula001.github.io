@@ -73,7 +73,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"2Y5K8ky5BnhiLBxRPncS7t15-gzGzoHsz","app_key":"zSDpcspksTGp7aQLzYrIo0lr","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"2Y5K8ky5BnhiLBxRPncS7t15-gzGzoHsz","app_key":"zSDpcspksTGp7aQLzYrIo0lr","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -287,7 +287,7 @@
 <li>虚拟机</li>
 </ol>
 <p>暖态运行：函数运行在被缓存中的内存中的容器中</p>
-<p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/%E6%9A%96%E5%90%AF%E5%8A%A8%E5%92%8C%E5%86%B7%E5%90%AF%E5%8A%A8%E6%97%B6%E9%97%B4%E5%AF%B9%E6%AF%94.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/%E6%9A%96%E5%90%AF%E5%8A%A8%E5%92%8C%E5%86%B7%E5%90%AF%E5%8A%A8%E6%97%B6%E9%97%B4%E5%AF%B9%E6%AF%94.png"></p>
 <p>暖态的缺点：容器不能无限制的保存在内存中，一种常见的策略是设置超时时间。（LRU或者LFU）</p>
 <h3 id="3-2负载均衡"><a href="#3-2负载均衡" class="headerlink" title="3.2负载均衡"></a>3.2负载均衡</h3><p>Faas的负载均衡取决于两方面：</p>
 <ol>
@@ -296,15 +296,15 @@
 </ol>
 <h3 id="3-3-一致性哈希"><a href="#3-3-一致性哈希" class="headerlink" title="3.3 一致性哈希"></a>3.3 一致性哈希</h3><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000021199728">一致性哈希算法参考</a> </p>
 <p>传统哈希算法：增加或者减少服务器，需要重新计算哈希值，服务请求与处理请求服务器全部会改变</p>
-<p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/%E4%BC%A0%E7%BB%9Fhash.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/%E4%BC%A0%E7%BB%9Fhash.png"></p>
 <p>一致性哈希算法：在移除或者添加一个服务器时，能够尽可能小地改变已存在的服务请求与处理请求服务器之间的映射关系。</p>
-<p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/%E4%B8%80%E8%87%B4%E6%80%A7hash.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/%E4%B8%80%E8%87%B4%E6%80%A7hash.png"></p>
 <p>OpenWhisk使用的是修改后的一致性Hash算法，如果服务器内存满了，就沿着环路向下游转发。</p>
 <p>缺点：</p>
 <h2 id="四、CHALLENGES-IN-FAAS-LOAD-BALANCING"><a href="#四、CHALLENGES-IN-FAAS-LOAD-BALANCING" class="headerlink" title="四、CHALLENGES IN FAAS LOAD-BALANCING"></a>四、CHALLENGES IN FAAS LOAD-BALANCING</h2><p>提出了三点挑战</p>
 <h3 id="4-1-Function-Heterogeneity-and-Skew（函数的异质性和倾斜性）"><a href="#4-1-Function-Heterogeneity-and-Skew（函数的异质性和倾斜性）" class="headerlink" title="4.1 Function Heterogeneity and Skew（函数的异质性和倾斜性）"></a>4.1 Function Heterogeneity and Skew（函数的异质性和倾斜性）</h3><p>从运行时间的角度来说，函数是高度异质的（有的函数运行了100ms，有的则运行了大概一分钟）</p>
 <p>倾斜性：简单来说，就是每个函数运行的频率不同</p>
-<p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/%E5%80%BE%E6%96%9C%E6%80%A7.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/%E5%80%BE%E6%96%9C%E6%80%A7.png"></p>
 <p>每条线：代表不同函数集的大小</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yzcjwddbdgg/article/details/88063677">PDF,PMF,CDF参考</a></p>
 <ul>
@@ -312,7 +312,7 @@
 <li>PMF : 概率质量函数（probability mass function), 在概率论中，概率质量函数是<strong>离散随机变量</strong>在各特定取值上的概率。</li>
 <li>CDF : 累积分布函数 (cumulative distribution function)，又叫分布函数，是<strong>概率密度函数的积分</strong>，能完整描述一个实随机变量X的概率分布。</li>
 </ul>
-<h3 id="4-2-Bursty-Invocations"><a href="#4-2-Bursty-Invocations" class="headerlink" title="4.2 Bursty Invocations"></a>4.2 Bursty Invocations</h3><p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/IAT.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="4-2-Bursty-Invocations"><a href="#4-2-Bursty-Invocations" class="headerlink" title="4.2 Bursty Invocations"></a>4.2 Bursty Invocations</h3><p><img src="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/IAT.png"></p>
 <ul>
 <li>Arrival Rate：指在规定时间到达的数量。 – Arrival rate &#x3D; 1 &#x2F; inter arrival time</li>
 <li>Inter Arrival Time: 指每个到达系统及下一个的时间。 – inter arrival time &#x3D; 1 &#x2F; arrival rate</li>
@@ -442,7 +442,7 @@
             </div>
 
             
-  <article id="comments" lazyload>
+  <article id="comments">
     
   <div id="valine"></div>
   <script type="text/javascript">
@@ -649,10 +649,6 @@
 
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

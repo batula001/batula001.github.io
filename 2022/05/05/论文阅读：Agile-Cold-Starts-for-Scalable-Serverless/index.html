@@ -78,7 +78,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"2Y5K8ky5BnhiLBxRPncS7t15-gzGzoHsz","app_key":"zSDpcspksTGp7aQLzYrIo0lr","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"2Y5K8ky5BnhiLBxRPncS7t15-gzGzoHsz","app_key":"zSDpcspksTGp7aQLzYrIo0lr","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -301,7 +301,7 @@
 </ol>
 <h3 id="Pause-Container作用"><a href="#Pause-Container作用" class="headerlink" title="Pause Container作用"></a><strong>Pause Container作用</strong></h3><p>  在K8S里面，一个Pod里包含多个容器，Puase容器用于解决如何让一个 Pod 里的多个容器之间最高效的共享某些资源和数据。</p>
 <p>  相当于一个代理模式。</p>
-<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/Pausecontainer.png" srcset="/img/loading.gif" lazyload alt="Pausecontainer"></p>
+<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/Pausecontainer.png" alt="Pausecontainer"></p>
 <h2 id="三、Related-Work"><a href="#三、Related-Work" class="headerlink" title="三、Related Work"></a>三、Related Work</h2><h3 id="pre-warmed-containers方法"><a href="#pre-warmed-containers方法" class="headerlink" title="pre-warmed containers方法"></a><strong>pre-warmed containers方法</strong></h3><p>预热容器，预先创建带有所需代码及其依赖关系的容器并在调用时启动它来节省启动一个新容器的成本。</p>
 <h3 id="warm-container"><a href="#warm-container" class="headerlink" title="warm container"></a>warm container</h3><p>通过缓存一个具有所需环境的容器的运行副本，来节省启动时间。</p>
 <h3 id="周期性预热"><a href="#周期性预热" class="headerlink" title="周期性预热"></a>周期性预热</h3><p>每隔一段时间提交假的请求，以保持容器的温度。</p>
@@ -311,7 +311,7 @@
 <li>轻微的供应不足也会引起冷启动突发，并产生大量的启动时间</li>
 <li>不能有效地缓解非确定性和并发性的调用</li>
 </ol>
-<h3 id="四、并发下冷启动的影响"><a href="#四、并发下冷启动的影响" class="headerlink" title="四、并发下冷启动的影响"></a>四、并发下冷启动的影响</h3><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%B9%B6%E5%8F%91%E4%B8%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E7%9A%84%E5%BD%B1%E5%93%8D.png" srcset="/img/loading.gif" lazyload alt="并发下冷启动的影响"></p>
+<h3 id="四、并发下冷启动的影响"><a href="#四、并发下冷启动的影响" class="headerlink" title="四、并发下冷启动的影响"></a>四、并发下冷启动的影响</h3><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%B9%B6%E5%8F%91%E4%B8%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E7%9A%84%E5%BD%B1%E5%93%8D.png" alt="并发下冷启动的影响"></p>
 <p><strong>图1a中</strong></p>
 <ol>
 <li>启动时间–这是创建和初始化Docker容器的时间</li>
@@ -324,7 +324,7 @@
 <li>图1（b）显示了并发函数触发器执行Lambda函数的总时间。</li>
 <li>p99时间随着并发性的增加而增加。</li>
 </ol>
-<h2 id="五、网络对冷启动时间的影响"><a href="#五、网络对冷启动时间的影响" class="headerlink" title="五、网络对冷启动时间的影响"></a>五、网络对冷启动时间的影响</h2><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%AE%B9%E5%99%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9B%E5%BB%BA%E6%B5%81%E7%A8%8B.png" srcset="/img/loading.gif" lazyload alt="容器和网络空间的创建流程"></p>
+<h2 id="五、网络对冷启动时间的影响"><a href="#五、网络对冷启动时间的影响" class="headerlink" title="五、网络对冷启动时间的影响"></a>五、网络对冷启动时间的影响</h2><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%AE%B9%E5%99%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%9B%E5%BB%BA%E6%B5%81%E7%A8%8B.png" alt="容器和网络空间的创建流程"></p>
 <p>一个容器经历了四个主要阶段</p>
 <ol>
 <li>服务调用，其中一个功能触发器到达Docker守护进程</li>
@@ -333,11 +333,11 @@
 <li>清理，包括停止容器，断开其网络连接，并销毁它。</li>
 </ol>
 <p>  服务调用、启动和运行时间直接落在函数执行的关键路径上。清理步骤可能间接地落在其他功能的关键路径上，因为它需要Docker守护程序的周期。</p>
-<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/50%E4%B8%AA%E5%B9%B6%E5%8F%91%E5%87%BD%E6%95%B0%E6%89%80%E8%80%97%E8%B4%B9%E7%9A%84%E6%97%B6%E9%97%B4.png" srcset="/img/loading.gif" lazyload alt="50个并发函数所耗费的时间"></p>
+<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/50%E4%B8%AA%E5%B9%B6%E5%8F%91%E5%87%BD%E6%95%B0%E6%89%80%E8%80%97%E8%B4%B9%E7%9A%84%E6%97%B6%E9%97%B4.png" alt="50个并发函数所耗费的时间"></p>
 <p>  从图可以看到，启动时间的增长是限制性能扩展的主要因素，第二因素是容器的清理时间。进一步来说网络创建和网络连接步骤占了启动时间的90%。具体实验的结果如下图所示。</p>
-<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E8%A1%A81.png" srcset="/img/loading.gif" lazyload alt="不同并发量的实验结果"></p>
+<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E8%A1%A81.png" alt="不同并发量的实验结果"></p>
 <p><strong>结果显示：</strong>创建网络命名空间和初始化的时间随着并发性的增加而增加，这也是启动时间超线性增加的主要原因。容器的清理包括删除命名空间和Veth对，表1显示，这也随着并发性的增加而显著增加。</p>
-<h2 id="六、Pause-Container-Pool-Manager-PCPM"><a href="#六、Pause-Container-Pool-Manager-PCPM" class="headerlink" title="六、Pause Container Pool Manager (PCPM)"></a>六、Pause Container Pool Manager (PCPM)</h2><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/PCPM.png" srcset="/img/loading.gif" lazyload alt="PCPM模型"></p>
+<h2 id="六、Pause-Container-Pool-Manager-PCPM"><a href="#六、Pause-Container-Pool-Manager-PCPM" class="headerlink" title="六、Pause Container Pool Manager (PCPM)"></a>六、Pause Container Pool Manager (PCPM)</h2><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/PCPM.png" alt="PCPM模型"></p>
 <p>模型介绍：包括预先创建网络并将其连接到功能容器上，原本花在网络创建和网络连接步骤上的时间就可以从启动的关键步骤中移除。</p>
 <h3 id="6-1Network-Pre-creation"><a href="#6-1Network-Pre-creation" class="headerlink" title="6.1Network Pre-creation"></a>6.1Network Pre-creation</h3><p>提出了pause container（PC）池化概念。</p>
 <ol>
@@ -347,16 +347,16 @@
 <li>PCPM创建PC并将它们放在一个池中。当需要时，它们就会从池中取出，并与功能容器绑定；而当这些应用容器准备终止时，PC就会被分离并放回池中。</li>
 <li>PC与环境无关，可以被任何应用容器使用</li>
 </ol>
-<h3 id="6-2PC-Pool-Management"><a href="#6-2PC-Pool-Management" class="headerlink" title="6.2PC Pool Management"></a>6.2PC Pool Management</h3><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E4%BD%BF%E7%94%A8PC.png" srcset="/img/loading.gif" lazyload alt="使用PC"></p>
+<h3 id="6-2PC-Pool-Management"><a href="#6-2PC-Pool-Management" class="headerlink" title="6.2PC Pool Management"></a>6.2PC Pool Management</h3><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E4%BD%BF%E7%94%A8PC.png" alt="使用PC"></p>
 <p>PCPM管理着一个PC池；它在三个关键阶段进行管理。</p>
 <ol>
 <li>如图（a）所示，在构建阶段，一些暂停的容器被启动。这时，PCPM用对应于PC的标识符初始化一个自由池。调用者通过PCPM掌握了关于PC的知识。</li>
 <li>图（b）显示了第二个阶段，即执行阶段。在这一阶段，调用者查询池管理器并获得可用PC的标识符（例如，图（b）中的PC 1）。使用这个标识符，调用者将新启动的容器附加到相应的PC（即PC 1）上，并将其从空闲池中移除。</li>
 <li>图（c）描述了第三个阶段，即完成阶段，当一个函数完成后，其执行容器被终止或以其他方式回收。</li>
 </ol>
-<h2 id="七、Result"><a href="#七、Result" class="headerlink" title="七、Result"></a>七、Result</h2><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C1.png" srcset="/img/loading.gif" lazyload alt="实验结果1"></p>
-<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C2.png" srcset="/img/loading.gif" lazyload alt="实验结果2">  </p>
-<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C3.png" srcset="/img/loading.gif" lazyload alt="实验结果3"></p>
+<h2 id="七、Result"><a href="#七、Result" class="headerlink" title="七、Result"></a>七、Result</h2><p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C1.png" alt="实验结果1"></p>
+<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C2.png" alt="实验结果2">  </p>
+<p><img src="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C3.png" alt="实验结果3"></p>
 <p>基于PCPM的OpenWhisk的并发执行情况，使用未修改的OpenWhisk作为基线。在这一节中，我们与预热和温热容器的缓解措施进行了比较，结果显示执行时间节省了80%（相对于冷启动），相对于预热&#x2F;温热容器，内存节省了几个数量级。</p>
 <h2 id="八、Summary-and-Discussion"><a href="#八、Summary-and-Discussion" class="headerlink" title="八、Summary and Discussion"></a>八、Summary and Discussion</h2><p>  本文提出的解决方案预先创建网络（而不是预先创建容器），并将预先创建的网络无缝地附加到功能容器上。与冷容器相比，执行时间减少了80%，与预热容器相比，内存占用减少了几个数量级，性能下降不大。</p>
 <p>需改进的地方：</p>
@@ -485,7 +485,7 @@
             </div>
 
             
-  <article id="comments" lazyload>
+  <article id="comments">
     
   <div id="valine"></div>
   <script type="text/javascript">
@@ -692,10 +692,6 @@
 
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 
