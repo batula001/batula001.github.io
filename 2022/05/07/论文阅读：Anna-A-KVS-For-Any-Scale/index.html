@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="翔翔">
 <meta property="og:description" content="Anna: A KVS For Any Scale（还未阅读，参考知乎总结）Anna总结篇 Anna v0：Chenggang Wu, Jose M. Faleiro, Yihan Lin, Joseph M. Hellerstein: Anna: A KVS for Any Scale. ICDE 2018: 401-412 发表2018-ICDE （数据库-CCF-A-会议） Anna V1：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAnna-A-KVS-For-Any-Scale/Anna%E6%9E%B6%E6%9E%84%E5%9B%BE">
+<meta property="og:image" content="http://example.com/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAnna-A-KVS-For-Any-Scale/Anna%E6%9E%B6%E6%9E%84%E5%9B%BE.png">
 <meta property="article:published_time" content="2022-05-07T15:20:59.000Z">
-<meta property="article:modified_time" content="2022-05-07T15:57:22.317Z">
+<meta property="article:modified_time" content="2022-05-07T16:31:00.602Z">
 <meta property="article:author" content="yyx">
 <meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAnna-A-KVS-For-Any-Scale/Anna%E6%9E%B6%E6%9E%84%E5%9B%BE">
+<meta name="twitter:image" content="http://example.com/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAnna-A-KVS-For-Any-Scale/Anna%E6%9E%B6%E6%9E%84%E5%9B%BE.png">
   
   
   <title>论文阅读：Anna: A KVS For Any Scale - 翔翔</title>
@@ -291,7 +291,7 @@
 <li><p>DELETE基于PUT &lt;key, null&gt; 实现，即把某个key的值设置为null。</p>
 </li>
 </ul>
-<p><img src="/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAnna-A-KVS-For-Any-Scale/Anna%E6%9E%B6%E6%9E%84%E5%9B%BE" alt="Anna架构图"></p>
+<p><img src="/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAnna-A-KVS-For-Any-Scale/Anna%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="Anna架构图"></p>
 <p>User发起GET&#x2F;PUT&#x2F;DELETE请求给Client Proxy，Client Proxy根据一致性hash找到存有数据副本的多个Actor，然后随机选择一个Actor发送请求。注意Anna计算一致性hash的位置时，是以Actor为单位而不是单个server为单位的。单个server可以包含多个Actor，对于每<strong>一个CPU线程都有一个Actor与其对应</strong>。之后，收到请求的Actor再去访问它自己的私有Actor HashTable，对里面的数据进行操作。</p>
 <h3 id="不同数据副本之间如何保持同步？"><a href="#不同数据副本之间如何保持同步？" class="headerlink" title="不同数据副本之间如何保持同步？"></a>不同数据副本之间如何保持同步？</h3><p>首先，Anna是share nothing结构，Actor之间的通信完全靠message queue，不共享任何状态，也就没有任何锁结构。</p>
 <p>所以读操作不需要同步机制,GET操作允许读到过期的数据。</p>
