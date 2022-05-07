@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>论文阅读：Deadline-aware Dynamic Resource Management in Serverless Computing Environments</title>
+    <link href="/2022/05/08/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ADeadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/"/>
+    <url>/2022/05/08/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ADeadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Deadline-aware-Dynamic-Resource-Management-in-Serverless-Computing"><a href="#Deadline-aware-Dynamic-Resource-Management-in-Serverless-Computing" class="headerlink" title="Deadline-aware Dynamic Resource Management in Serverless Computing"></a>Deadline-aware Dynamic Resource Management in Serverless Computing</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>问题提出</strong>：供应商如何在不影响需求的情况下，从而对云资源进行高效的利用？</p><p><strong>问题解决：</strong>我们同时关注提供者和用户的角度，并为部署在无服务器计算环境中的应用<strong>提出了一个功能放置策略和一个动态资源管理策略。</strong>这些策略在满足用户的应用需求（即<strong>最后期限</strong>（deadline））的同时，最大限度地减少了服务提供者的资源消耗成本。</p><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p><img src="/2022/05/08/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ADeadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/Model.png" alt="Model.png"></p><p>两个贡献：</p><ol><li>DBP，也就是LoadBalancer，将请求分配到不同的VM。</li><li>DRM，动态的调整function的实例。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Serverless</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>论文阅读</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>论文阅读：Nightcore: efficient and scalable serverless computing for latency-sensitive, interactive microservices</title>
     <link href="/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ANightcore-efficient-and-scalable-serverless-computing-for-latency-sensitive-interactive-microservices/"/>
     <url>/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ANightcore-efficient-and-scalable-serverless-computing-for-latency-sensitive-interactive-microservices/</url>

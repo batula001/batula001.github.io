@@ -16,21 +16,23 @@
   <meta name="author" content="yyx">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Nightcore: Efficient and Scalable Serverless Computing for Latency-Sensitive, Interactive Microservices引用格式：Zhipeng Jia and Emmett Witchel. 2021. Nightcore: Efficient and Scalable Serverless Computing">
+    <meta name="description" content="Deadline-aware Dynamic Resource Management in Serverless ComputingAbstract问题提出：供应商如何在不影响需求的情况下，从而对云资源进行高效的利用？ 问题解决：我们同时关注提供者和用户的角度，并为部署在无服务器计算环境中的应用提出了一个功能放置策略和一个动态资源管理策略。这些策略在满足用户的应用需求（即最后期限（deadline">
 <meta property="og:type" content="article">
-<meta property="og:title" content="论文阅读：Nightcore: efficient and scalable serverless computing for latency-sensitive, interactive microservices">
-<meta property="og:url" content="http://example.com/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ANightcore-efficient-and-scalable-serverless-computing-for-latency-sensitive-interactive-microservices/index.html">
+<meta property="og:title" content="论文阅读：Deadline-aware Dynamic Resource Management in Serverless Computing Environments">
+<meta property="og:url" content="http://example.com/2022/05/08/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ADeadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/index.html">
 <meta property="og:site_name" content="翔翔">
-<meta property="og:description" content="Nightcore: Efficient and Scalable Serverless Computing for Latency-Sensitive, Interactive Microservices引用格式：Zhipeng Jia and Emmett Witchel. 2021. Nightcore: Efficient and Scalable Serverless Computing">
+<meta property="og:description" content="Deadline-aware Dynamic Resource Management in Serverless ComputingAbstract问题提出：供应商如何在不影响需求的情况下，从而对云资源进行高效的利用？ 问题解决：我们同时关注提供者和用户的角度，并为部署在无服务器计算环境中的应用提出了一个功能放置策略和一个动态资源管理策略。这些策略在满足用户的应用需求（即最后期限（deadline">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-07T15:56:26.000Z">
-<meta property="article:modified_time" content="2022-05-07T16:27:55.842Z">
+<meta property="og:image" content="http://example.com/2022/05/08/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ADeadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/Model.png">
+<meta property="article:published_time" content="2022-05-07T16:36:02.000Z">
+<meta property="article:modified_time" content="2022-05-07T16:41:51.214Z">
 <meta property="article:author" content="yyx">
 <meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2022/05/08/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ADeadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/Model.png">
   
   
-  <title>论文阅读：Nightcore: efficient and scalable serverless computing for latency-sensitive, interactive microservices - 翔翔</title>
+  <title>论文阅读：Deadline-aware Dynamic Resource Management in Serverless Computing Environments - 翔翔</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -187,7 +189,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="论文阅读：Nightcore: efficient and scalable serverless computing for latency-sensitive, interactive microservices"></span>
+            <span id="subtitle" data-typed-text="论文阅读：Deadline-aware Dynamic Resource Management in Serverless Computing Environments"></span>
           
         </div>
 
@@ -198,8 +200,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-07 23:56" pubdate>
-          2022年5月7日 晚上
+        <time datetime="2022-05-08 00:36" pubdate>
+          2022年5月8日 凌晨
         </time>
       </span>
     
@@ -210,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          748 字
+          283 字
         
       </span>
     
@@ -221,7 +223,7 @@
         
         
         
-          7 分钟
+          3 分钟
         
       </span>
     
@@ -267,24 +269,17 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">论文阅读：Nightcore: efficient and scalable serverless computing for latency-sensitive, interactive microservices</h1>
+            <h1 style="display: none">论文阅读：Deadline-aware Dynamic Resource Management in Serverless Computing Environments</h1>
             
             <div class="markdown-body">
               
-              <h1 id="Nightcore-Efficient-and-Scalable-Serverless-Computing-for-Latency-Sensitive-Interactive-Microservices"><a href="#Nightcore-Efficient-and-Scalable-Serverless-Computing-for-Latency-Sensitive-Interactive-Microservices" class="headerlink" title="Nightcore: Efficient and Scalable Serverless Computing for Latency-Sensitive, Interactive Microservices"></a>Nightcore: Efficient and Scalable Serverless Computing for Latency-Sensitive, Interactive Microservices</h1><p>引用格式：Zhipeng Jia and Emmett Witchel. 2021. Nightcore: Efficient and Scalable Serverless Computing for Latency-Sensitive, Interactive Microservices. In Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS ’21), April 19ś 23, 2021, Virtual, USA. ACM, New York, NY, USA, 15 pages. <a target="_blank" rel="noopener" href="https://doi.org/">https://doi.org/</a> 10.1145&#x2F;3445814.3446701</p>
-<p>出处：2021-ASPLOS（计算机体系结构&#x2F;并行与分布计算&#x2F;存储系统  CCF-A 会）</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1eb8469aaad5">参考简书回答</a></p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
-<li>交代了场景, 即FaaS for Microservice;</li>
-<li><strong>无法支持交互式微服务的亚毫秒延迟要求</strong>, 原因是FaaS具有毫秒级的<strong>运行时开销</strong>（亚毫秒：不超过1毫秒）</li>
-<li>运行时开销,  后面知道这是<strong>通讯开销</strong>, 而不是启动开销。<strong>（并非解决冷启动问题）</strong></li>
-<li>Nightcore 的设计仔细考虑了具有微秒级开销的各种因素，包括函数请求的调度、通信原语、I&#x2F;O 的线程模型和并发函数执行。（从这四个方面进行优化）</li>
-</ul>
-<p><strong>不足：</strong></p>
+              <h1 id="Deadline-aware-Dynamic-Resource-Management-in-Serverless-Computing"><a href="#Deadline-aware-Dynamic-Resource-Management-in-Serverless-Computing" class="headerlink" title="Deadline-aware Dynamic Resource Management in Serverless Computing"></a>Deadline-aware Dynamic Resource Management in Serverless Computing</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>问题提出</strong>：供应商如何在不影响需求的情况下，从而对云资源进行高效的利用？</p>
+<p><strong>问题解决：</strong>我们同时关注提供者和用户的角度，并为部署在无服务器计算环境中的应用<strong>提出了一个功能放置策略和一个动态资源管理策略。</strong>这些策略在满足用户的应用需求（即<strong>最后期限</strong>（deadline））的同时，最大限度地减少了服务提供者的资源消耗成本。</p>
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p><img src="/2022/05/08/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ADeadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/Model.png" alt="Model.png"></p>
+<p>两个贡献：</p>
 <ol>
-<li>不谈冷启动问题</li>
-<li>不专注于数据密集型的应用</li>
-<li><strong>专注于调用延迟, 把这一块的开销降低到微妙级</strong></li>
+<li>DBP，也就是LoadBalancer，将请求分配到不同的VM。</li>
+<li>DRM，动态的调整function的实例。</li>
 </ol>
 
               
@@ -330,8 +325,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>论文阅读：Nightcore: efficient and scalable serverless computing for latency-sensitive, interactive microservices</div>
-      <div>http://example.com/2022/05/07/论文阅读：Nightcore-efficient-and-scalable-serverless-computing-for-latency-sensitive-interactive-microservices/</div>
+      <div>论文阅读：Deadline-aware Dynamic Resource Management in Serverless Computing Environments</div>
+      <div>http://example.com/2022/05/08/论文阅读：Deadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/</div>
     </div>
     <div class="license-meta">
       
@@ -343,7 +338,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月7日</div>
+          <div>2022年5月8日</div>
         </div>
       
       
@@ -385,18 +380,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/08/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ADeadline-aware-Dynamic-Resource-Management-in-Serverless-Computing-Environments/" title="论文阅读：Deadline-aware Dynamic Resource Management in Serverless Computing Environments">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">论文阅读：Deadline-aware Dynamic Resource Management in Serverless Computing Environments</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAnna-A-KVS-For-Any-Scale/" title="论文阅读：Anna: A KVS For Any Scale">
-                        <span class="hidden-mobile">论文阅读：Anna: A KVS For Any Scale</span>
+                      <a href="/2022/05/07/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ANightcore-efficient-and-scalable-serverless-computing-for-latency-sensitive-interactive-microservices/" title="论文阅读：Nightcore: efficient and scalable serverless computing for latency-sensitive, interactive microservices">
+                        <span class="hidden-mobile">论文阅读：Nightcore: efficient and scalable serverless computing for latency-sensitive, interactive microservices</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
