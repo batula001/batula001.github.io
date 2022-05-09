@@ -16,21 +16,21 @@
   <meta name="author" content="yyx">
   <meta name="keywords" content="">
   
-    <meta name="description" content="刷题常用的API数组 求数组的长度 int length &#x3D; nums.length  一、数组704. 二分查找给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。 示例 1: 123输入: nums &#x3D; [-1,0,3,5,9,12], target &#x3D; 9输出: 4">
+    <meta name="description" content="数据结构与算法注意点和常见问题看过容易忘怎么解决？多看，多讲，自己手动实现出来！！ 看课+核心的两三句话，把每个核心的检验出来就行。 面试：1.白板  2.纸  3.txt 4.ide 题大：跟面试官聊，题大不是问题，不会聊是问题。和面试官聊写哪一部分的题。f()，g()，s()。 算法：带来资源的节省。 递归：找之前做过的题，来改，敏感度。提前见识这些模型。 面试官聊红黑树，恶趣味。聊的能力。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode算法">
-<meta property="og:url" content="http://example.com/2022/05/06/LeetCode%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:title" content="数据结构与算法学习">
+<meta property="og:url" content="http://example.com/2022/05/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="翔翔">
-<meta property="og:description" content="刷题常用的API数组 求数组的长度 int length &#x3D; nums.length  一、数组704. 二分查找给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。 示例 1: 123输入: nums &#x3D; [-1,0,3,5,9,12], target &#x3D; 9输出: 4">
+<meta property="og:description" content="数据结构与算法注意点和常见问题看过容易忘怎么解决？多看，多讲，自己手动实现出来！！ 看课+核心的两三句话，把每个核心的检验出来就行。 面试：1.白板  2.纸  3.txt 4.ide 题大：跟面试官聊，题大不是问题，不会聊是问题。和面试官聊写哪一部分的题。f()，g()，s()。 算法：带来资源的节省。 递归：找之前做过的题，来改，敏感度。提前见识这些模型。 面试官聊红黑树，恶趣味。聊的能力。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-06T03:24:50.000Z">
-<meta property="article:modified_time" content="2022-05-09T14:47:19.345Z">
+<meta property="article:published_time" content="2022-05-09T14:43:32.000Z">
+<meta property="article:modified_time" content="2022-05-09T15:46:05.661Z">
 <meta property="article:author" content="yyx">
 <meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>LeetCode算法 - 翔翔</title>
+  <title>数据结构与算法学习 - 翔翔</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -187,7 +187,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="LeetCode算法"></span>
+            <span id="subtitle" data-typed-text="数据结构与算法学习"></span>
           
         </div>
 
@@ -198,8 +198,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-06 11:24" pubdate>
-          2022年5月6日 上午
+        <time datetime="2022-05-09 22:43" pubdate>
+          2022年5月9日 晚上
         </time>
       </span>
     
@@ -210,7 +210,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          301 字
         
       </span>
     
@@ -221,7 +221,7 @@
         
         
         
-          15 分钟
+          3 分钟
         
       </span>
     
@@ -267,57 +267,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">LeetCode算法</h1>
+            <h1 style="display: none">数据结构与算法学习</h1>
             
             <div class="markdown-body">
               
-              <h1 id="刷题常用的API"><a href="#刷题常用的API" class="headerlink" title="刷题常用的API"></a>刷题常用的API</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ol>
-<li>求数组的长度 int length &#x3D; nums.length</li>
-</ol>
-<h1 id="一、数组"><a href="#一、数组" class="headerlink" title="一、数组"></a>一、数组</h1><h2 id="704-二分查找"><a href="#704-二分查找" class="headerlink" title="704. 二分查找"></a>704. 二分查找</h2><p>给定一个 <code>n</code> 个元素有序的（升序）整型数组 <code>nums</code> 和一个目标值 <code>target</code> ，写一个函数搜索 <code>nums</code> 中的 <code>target</code>，如果目标值存在返回下标，否则返回 <code>-1</code>。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs makefile"><span class="hljs-section">输入: nums = [-1,0,3,5,9,12], target = 9</span><br><span class="hljs-section">输出: 4</span><br><span class="hljs-section">解释: 9 出现在 nums 中并且下标为 4</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>示例 2:</strong></p>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs makefile"><span class="hljs-section">输入: nums = [-1,0,3,5,9,12], target = 2</span><br><span class="hljs-section">输出: -1</span><br><span class="hljs-section">解释: 2 不存在 nums 中因此返回 -1</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ol>
-<li>你可以假设 <code>nums</code> 中的所有元素是不重复的。</li>
-<li><code>n</code> 将在 <code>[1, 10000]</code>之间。</li>
-<li><code>nums</code> 的每个元素都将在 <code>[-9999, 9999]</code>之间。</li>
-</ol>
-<h3 id="思考："><a href="#思考：" class="headerlink" title="思考："></a>思考：</h3><ol>
-<li>有序元素且不重复，用二分查找的思路来写。</li>
-<li>二分查找涉及很多边界条件，while循环里。统一成闭区间，更新条件的时候。同时记住left &#x3D; mid + 1， right &#x3D; mid - 1</li>
-<li>为了避免越界，使用 mid &#x3D; left + (right - left) &#x2F;2 来求</li>
-<li>第一步应该判断是否出界，边界条件是否忽略。</li>
-</ol>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">search</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> &#123;<br>        <span class="hljs-keyword">if</span> (target &lt; nums[<span class="hljs-number">0</span>] || target &gt; nums[nums.length - <span class="hljs-number">1</span>]) &#123; <br>            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> nums.length - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span>(left &lt;= right)&#123;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">mid</span> <span class="hljs-operator">=</span> left + (right - left) / <span class="hljs-number">2</span>;<br>            <span class="hljs-keyword">if</span> (nums[mid] == target) &#123;<br>                <span class="hljs-keyword">return</span> mid;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(nums[mid] &lt; target)&#123;<br>                left = mid + <span class="hljs-number">1</span>;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(nums[mid] &gt; target)&#123;<br>                right = mid -<span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="提交出错的原因："><a href="#提交出错的原因：" class="headerlink" title="提交出错的原因："></a>提交出错的原因：</h3><ol>
-<li>没有 对target进行提前判断，忽略了边界条件。</li>
-<li><del>mid &#x3D;&#x3D; target</del> ， 没有考虑到此时的mid的数组下标，要比较的是数组里面的元素。</li>
-</ol>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><ol>
-<li>把这道题当作标准的二分查找模板</li>
-</ol>
-<h2 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27.移除元素"></a>27.移除元素</h2><p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
-<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并<strong>原地</strong>修改输入数组。</p>
-<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
-<p>示例 1: 给定 nums &#x3D; [3,2,2,3], val &#x3D; 3, 函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。 你不需要考虑数组中超出新长度后面的元素。</p>
-<p>示例 2: 给定 nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2, 函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。</p>
-<p><strong>你不需要考虑数组中超出新长度后面的元素。</strong></p>
-<h3 id="思考：-1"><a href="#思考：-1" class="headerlink" title="思考："></a>思考：</h3><ol>
-<li>算法技巧，利用双指针。此时则利用的是快慢指针</li>
-</ol>
-<h3 id="代码：-1"><a href="#代码：-1" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">removeElement</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> val)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">slowIndex</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">fastIndex</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; fastIndex &lt; nums.length; fastIndex++)&#123;<br>            <span class="hljs-keyword">if</span>(nums[fastIndex] != val)&#123;<br>                nums[slowIndex++] = nums[fastIndex];<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> slowIndex;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="总结：-1"><a href="#总结：-1" class="headerlink" title="总结："></a>总结：</h3><ol>
-<li>快慢指针的书写格式 slowIndex和fastIndex</li>
-<li>快慢指针，快指针在for循环里面，慢指针则在比较的条件里面，当<strong>不满足条件</strong>的时候，则两者一同前进。满足条件的时候，快指针则略过条件。</li>
-</ol>
-
+              <h1 id="数据结构与算法注意点和常见问题"><a href="#数据结构与算法注意点和常见问题" class="headerlink" title="数据结构与算法注意点和常见问题"></a>数据结构与算法注意点和常见问题</h1><h2 id="看过容易忘怎么解决？"><a href="#看过容易忘怎么解决？" class="headerlink" title="看过容易忘怎么解决？"></a>看过容易忘怎么解决？</h2><p>多看，多讲，自己手动实现出来！！</p>
+<p>看课+核心的两三句话，把每个核心的检验出来就行。</p>
+<p>面试：1.白板  2.纸  3.txt 4.ide</p>
+<p>题大：跟面试官聊，题大不是问题，不会聊是问题。和面试官聊写哪一部分的题。f()，g()，s()。</p>
+<p>算法：带来资源的节省。</p>
+<p>递归：找之前做过的题，来改，敏感度。提前见识这些模型。</p>
+<p>面试官聊红黑树，恶趣味。聊的能力。</p>
+<p>写代码：不能放太多抽象的东西，假设每一个变量都确定化，在串熟。然后在抽象化。</p>
+<p>对数器是什么？</p>
+<p>栈溢出？用<strong>对数器</strong>来搞。</p>
+<p>模数，中间结果拿long接着 2.中间结果提前拿long摸</p>
+<h1 id="复杂度、对数器、二分法"><a href="#复杂度、对数器、二分法" class="headerlink" title="复杂度、对数器、二分法"></a>复杂度、对数器、二分法</h1><h1 id="异或运算相关面试题"><a href="#异或运算相关面试题" class="headerlink" title="异或运算相关面试题"></a>异或运算相关面试题</h1><h1 id="一些基础的数据结构"><a href="#一些基础的数据结构" class="headerlink" title="一些基础的数据结构"></a>一些基础的数据结构</h1>
               
             </div>
             <hr/>
@@ -361,8 +326,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>LeetCode算法</div>
-      <div>http://example.com/2022/05/06/LeetCode算法/</div>
+      <div>数据结构与算法学习</div>
+      <div>http://example.com/2022/05/09/数据结构与算法学习/</div>
     </div>
     <div class="license-meta">
       
@@ -374,7 +339,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月6日</div>
+          <div>2022年5月9日</div>
         </div>
       
       
@@ -416,18 +381,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/06/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9ALocality-aware-Load-Balancing-For-Serverless-Clusters/" title="论文阅读：Locality-aware Load-Balancing For Serverless Clusters">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">论文阅读：Locality-aware Load-Balancing For Serverless Clusters</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/" title="论文阅读：Agile Cold Starts for Scalable Serverless">
-                        <span class="hidden-mobile">论文阅读：Agile Cold Starts for Scalable Serverless</span>
+                      <a href="/2022/05/09/%E4%BC%98%E7%A7%80%E7%BD%91%E7%AB%99/" title="优秀网站">
+                        <span class="hidden-mobile">优秀网站</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
