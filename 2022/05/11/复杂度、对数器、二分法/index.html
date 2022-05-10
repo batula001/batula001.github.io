@@ -16,23 +16,21 @@
   <meta name="author" content="yyx">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Java并发编程实战Brain Goetz著，机械工业出版社出版。本书是Java并发编程的鼻祖，本书编写的jdk版本为jdk6，并未到jdk8 第一章 简介随着多处理器系统的出现，一个机器中可以拥有多个CPU，为了使用多核CPU的能力，最简单的方式就是使用线程。 1.1并发简史早期计算机：早期计算机不包含操作系统，一个计算机仅执行一条程序。并且这个程序可以访问计算机中所有的资源。 操作系统的出现：">
+    <meta name="description" content="复杂度、对数器、二分法复杂度评估算法优劣的核心指标是什么？  时间复杂度（流程决定） 额外空间复杂度（流程决定） 常数项时间（实现细节决定）  常数时间的操作。算数运算，位运算，赋值，比较，数组寻址。 list.get(i) 是一个O(N)的操作  不是固定时间操作，单链表，跳转结构，不是连续结构。 时间复杂度，算法流程中，假设数据量位N，执行完之后，整个流程的常数操作时什么操作？然后在分析时间复">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java并发编程实战">
-<meta property="og:url" content="http://example.com/2022/05/04/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98/index.html">
+<meta property="og:title" content="复杂度、对数器、二分法">
+<meta property="og:url" content="http://example.com/2022/05/11/%E5%A4%8D%E6%9D%82%E5%BA%A6%E3%80%81%E5%AF%B9%E6%95%B0%E5%99%A8%E3%80%81%E4%BA%8C%E5%88%86%E6%B3%95/index.html">
 <meta property="og:site_name" content="翔翔">
-<meta property="og:description" content="Java并发编程实战Brain Goetz著，机械工业出版社出版。本书是Java并发编程的鼻祖，本书编写的jdk版本为jdk6，并未到jdk8 第一章 简介随着多处理器系统的出现，一个机器中可以拥有多个CPU，为了使用多核CPU的能力，最简单的方式就是使用线程。 1.1并发简史早期计算机：早期计算机不包含操作系统，一个计算机仅执行一条程序。并且这个程序可以访问计算机中所有的资源。 操作系统的出现：">
+<meta property="og:description" content="复杂度、对数器、二分法复杂度评估算法优劣的核心指标是什么？  时间复杂度（流程决定） 额外空间复杂度（流程决定） 常数项时间（实现细节决定）  常数时间的操作。算数运算，位运算，赋值，比较，数组寻址。 list.get(i) 是一个O(N)的操作  不是固定时间操作，单链表，跳转结构，不是连续结构。 时间复杂度，算法流程中，假设数据量位N，执行完之后，整个流程的常数操作时什么操作？然后在分析时间复">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/05/04/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98/%E5%9B%BE1-1.png">
-<meta property="article:published_time" content="2022-05-04T15:29:09.000Z">
-<meta property="article:modified_time" content="2022-05-10T15:42:11.198Z">
+<meta property="article:published_time" content="2022-05-10T16:00:43.000Z">
+<meta property="article:modified_time" content="2022-05-10T16:20:57.964Z">
 <meta property="article:author" content="yyx">
-<meta property="article:tag" content="专业书籍">
+<meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2022/05/04/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98/%E5%9B%BE1-1.png">
   
   
-  <title>Java并发编程实战 - 翔翔</title>
+  <title>复杂度、对数器、二分法 - 翔翔</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -189,7 +187,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Java并发编程实战"></span>
+            <span id="subtitle" data-typed-text="复杂度、对数器、二分法"></span>
           
         </div>
 
@@ -200,8 +198,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-04 23:29" pubdate>
-          2022年5月4日 晚上
+        <time datetime="2022-05-11 00:00" pubdate>
+          2022年5月11日 凌晨
         </time>
       </span>
     
@@ -212,7 +210,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          2.6k 字
         
       </span>
     
@@ -223,7 +221,7 @@
         
         
         
-          12 分钟
+          22 分钟
         
       </span>
     
@@ -269,42 +267,46 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Java并发编程实战</h1>
+            <h1 style="display: none">复杂度、对数器、二分法</h1>
             
             <div class="markdown-body">
               
-              <h1 id="Java并发编程实战"><a href="#Java并发编程实战" class="headerlink" title="Java并发编程实战"></a>Java并发编程实战</h1><p>Brain Goetz著，机械工业出版社出版。本书是Java并发编程的鼻祖，本书编写的jdk版本为jdk6，并未到jdk8</p>
-<h2 id="第一章-简介"><a href="#第一章-简介" class="headerlink" title="第一章 简介"></a>第一章 简介</h2><p>随着多处理器系统的出现，一个机器中可以拥有多个CPU，为了使用多核CPU的能力，最简单的方式就是使用线程。</p>
-<h3 id="1-1并发简史"><a href="#1-1并发简史" class="headerlink" title="1.1并发简史"></a>1.1并发简史</h3><p>早期计算机：早期计算机不包含操作系统，一个计算机仅执行一条程序。并且这个程序可以访问计算机中所有的资源。</p>
-<p>操作系统的出现：每次可以运行多个程序，不同程序包含在不同的进程中。</p>
-<p><strong>操作系统的出现从而促进多进程的出现，多进程出现的因素有：</strong></p>
+              <h1 id="复杂度、对数器、二分法"><a href="#复杂度、对数器、二分法" class="headerlink" title="复杂度、对数器、二分法"></a>复杂度、对数器、二分法</h1><h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>评估算法优劣的核心指标是什么？</p>
 <ol>
-<li>提高资源利用率。在执行某个外部操作的时候，程序必须等待。如果在程序等待的过程中，执行另外一个进行，无疑是提高了资源利用率。</li>
-<li>提高了公平性。可以避免一个进程独占机器，从而使得不同用户和程序对计算机的资源有着同等的使用权。</li>
-<li>提高了程序的遍历性。从一个程序执行所有任务到了多个程序执行多个任务。</li>
+<li>时间复杂度（流程决定）</li>
+<li>额外空间复杂度（流程决定）</li>
+<li>常数项时间（实现细节决定）</li>
 </ol>
-<h3 id="1-2进程的优势"><a href="#1-2进程的优势" class="headerlink" title="1.2进程的优势"></a>1.2进程的优势</h3><p><strong>进程的优点</strong>：</p>
+<h3 id="常数时间的操作。"><a href="#常数时间的操作。" class="headerlink" title="常数时间的操作。"></a>常数时间的操作。</h3><p>算数运算，位运算，赋值，比较，数组寻址。</p>
+<p>list.get(i) 是一个O(N)的操作</p>
+<p> 不是固定时间操作，单链表，跳转结构，不是连续结构。</p>
+<p>时间复杂度，算法流程中，假设数据量位N，执行完之后，整个流程的常数操作时什么操作？然后在分析时间复杂度。</p>
+<p>复杂度只要最高阶数，常数都省略掉。复杂度只关心最高阶是什么。时间复杂度关心N趋向于无穷大的时候。</p>
+<h3 id="额外空间复杂度"><a href="#额外空间复杂度" class="headerlink" title="额外空间复杂度"></a>额外空间复杂度</h3><p>整个算法中，开辟的是有限的几个变量就是O（1）。</p>
+<p>用户输入什么参数不算额外空间，用户要完成的功能也不算你的额外空间。</p>
+<p><strong>作为输入参数的空间，不算额外空间。</strong></p>
+<p><strong>作为输出结果的空间，也不算额外空间。</strong></p>
+<h3 id="常数项时间"><a href="#常数项时间" class="headerlink" title="常数项时间"></a>常数项时间</h3><p>复杂度一样，则拼常数项的阶段。怎么拼？生成随机数，直接测。放弃理论，直接测量。</p>
+<h3 id="一个问题的最优解"><a href="#一个问题的最优解" class="headerlink" title="一个问题的最优解"></a>一个问题的最优解</h3><p>时间复杂度尽可能低，在保证时间复杂度低的情况下，空间复杂度在尽可能低。不考虑常数项的时间。</p>
+<h3 id="数据结构算法大脉络？"><a href="#数据结构算法大脉络？" class="headerlink" title="数据结构算法大脉络？"></a>数据结构算法大脉络？</h3><p>1）知道怎么算的算法 2）知道怎么试的算法。（探探）</p>
+<h2 id="对数器"><a href="#对数器" class="headerlink" title="对数器"></a>对数器</h2><p>在线测试。想验证的算法，不依赖别人写的测试用例。用大量本随机测试万无一失。</p>
 <ol>
-<li>降低程序开发和维护成本，提升复杂程序的性能</li>
-<li>线程将大部分异步的工作流转换成串行的工作流。从而更能模拟人类的想法。</li>
-<li>可以降低代码的复杂度、使程序更容易编写。</li>
+<li>想要测a方法</li>
+<li>时间复杂度不好，但容易实现b方法</li>
+<li>实现一个随机样本生成器</li>
+<li>a和b跑同样的样本，看看结果是否一样？不一样则打印出来</li>
 </ol>
-<h4 id="1-2-1发挥多处理器的优势"><a href="#1-2-1发挥多处理器的优势" class="headerlink" title="1.2.1发挥多处理器的优势"></a>1.2.1发挥多处理器的优势</h4><ol>
-<li>多线程的程序可以同时在多个处理器上执行。如果设计的正确，多线程程序可以通过提高处理器资源利用率来提高系统的吞吐量。</li>
-<li>多线程也能在单处理器系统上获得更高的吞吐量。比如一个程序等待IO执行完成，此处CPU空闲，另外一个线程就可以使用该CPU从而提高了吞吐量。</li>
-</ol>
-<h4 id="1-2-2建模简单性"><a href="#1-2-2建模简单性" class="headerlink" title="1.2.2建模简单性"></a>1.2.2建模简单性</h4><p>如果程序只包含一种任务，那么比包含多种任务的程序更容易编写、测试。使用线程，可以将复杂的工作流分解为一组同步的工作流，只用在特定的位置交互即可。</p>
-<h4 id="1-2-3异步事件的简化处理"><a href="#1-2-3异步事件的简化处理" class="headerlink" title="1.2.3异步事件的简化处理"></a>1.2.3异步事件的简化处理</h4><p>服务器接收多个远程客户端的套接字连接请求的时候，如果为每一个连接都分配各自的线程并且使用同步IO，那么会降低程序的开发难度。</p>
-<h4 id="1-2-4响应更灵敏的用户界面"><a href="#1-2-4响应更灵敏的用户界面" class="headerlink" title="1.2.4响应更灵敏的用户界面"></a>1.2.4响应更灵敏的用户界面</h4><p>多线程使AWT和Swing等工具变得更加灵活。</p>
-<h3 id="1-3线程带来的风险"><a href="#1-3线程带来的风险" class="headerlink" title="1.3线程带来的风险"></a>1.3线程带来的风险</h3><p>简化了并发程序的开发，但是也提高了对开发人员的技术要求。</p>
-<h4 id="1-3-1-安全问题"><a href="#1-3-1-安全问题" class="headerlink" title="1.3.1 安全问题"></a>1.3.1 安全问题</h4><p>十个线程操作i++会出现哪些问题？</p>
-<p>i++包含了三个独立的操作，读取i的值，i+1，把结果写回i。程序运行的时候，可能将多个线程交替执行，两个线程可能同事执行读操作，从而得到相同的值，并且都将其+1。</p>
-<p><img src="/2022/05/04/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98/%E5%9B%BE1-1.png"></p>
-<p><strong>竞态条件：</strong>描述一个系统或者进程的输出依赖于不受控制的事件出现顺序或者出现时机。</p>
-<h4 id="1-3-2活跃性问题"><a href="#1-3-2活跃性问题" class="headerlink" title="1.3.2活跃性问题"></a>1.3.2活跃性问题</h4><p>当某个操作无法执行下去的时候，就会发生活跃性问题。比如死锁问题。</p>
-<h4 id="1-3-3性能问题"><a href="#1-3-3性能问题" class="headerlink" title="1.3.3性能问题"></a>1.3.3性能问题</h4><p>活跃性问题指的是某些事情会发生，但却不太好，因为会带来性能问题。比如响应不灵敏，吞吐量过低。当线程切换的时候，会带来上下文切换的操作，CPU将会把时间花费在调度线程而不是线程的执行，使用同步机制的时候，会抑制编译器的优化，从而带来性能问题。</p>
-<h3 id="1-3线程无处不在"><a href="#1-3线程无处不在" class="headerlink" title="1.3线程无处不在"></a>1.3线程无处不在</h3><p>Java应用启动时会创建一个主线程来运行main方法，以及后台进程如垃圾回收进程等。</p>
-<h2 id="第二章-线程安全性"><a href="#第二章-线程安全性" class="headerlink" title="第二章 线程安全性"></a>第二章 线程安全性</h2><h2 id="第三章-对象的共享"><a href="#第三章-对象的共享" class="headerlink" title="第三章 对象的共享"></a>第三章 对象的共享</h2><h2 id="第四章-对象的组合"><a href="#第四章-对象的组合" class="headerlink" title="第四章 对象的组合"></a>第四章 对象的组合</h2><h2 id="第五章-基础构建模块"><a href="#第五章-基础构建模块" class="headerlink" title="第五章 基础构建模块"></a>第五章 基础构建模块</h2><h2 id="第六章-任务执行"><a href="#第六章-任务执行" class="headerlink" title="第六章 任务执行"></a>第六章 任务执行</h2><h2 id="第七章-取消与关闭"><a href="#第七章-取消与关闭" class="headerlink" title="第七章 取消与关闭"></a>第七章 取消与关闭</h2><h2 id="第八章-线程池的使用"><a href="#第八章-线程池的使用" class="headerlink" title="第八章 线程池的使用"></a>第八章 线程池的使用</h2><h2 id="第九章-图形用户界面应用程序"><a href="#第九章-图形用户界面应用程序" class="headerlink" title="第九章 图形用户界面应用程序"></a>第九章 图形用户界面应用程序</h2><h2 id="第十章-避免活跃性危险"><a href="#第十章-避免活跃性危险" class="headerlink" title="第十章 避免活跃性危险"></a>第十章 避免活跃性危险</h2><h2 id="第十一章-性能与可伸缩性"><a href="#第十一章-性能与可伸缩性" class="headerlink" title="第十一章 性能与可伸缩性"></a>第十一章 性能与可伸缩性</h2><h2 id="第十二章-并发程序的测试"><a href="#第十二章-并发程序的测试" class="headerlink" title="第十二章 并发程序的测试"></a>第十二章 并发程序的测试</h2><h2 id="第十三章-显示锁"><a href="#第十三章-显示锁" class="headerlink" title="第十三章 显示锁"></a>第十三章 显示锁</h2><h2 id="第十四章-构建自定义的同步工具"><a href="#第十四章-构建自定义的同步工具" class="headerlink" title="第十四章 构建自定义的同步工具"></a>第十四章 构建自定义的同步工具</h2><h2 id="第十五章-原子变量与非阻塞同步机制"><a href="#第十五章-原子变量与非阻塞同步机制" class="headerlink" title="第十五章 原子变量与非阻塞同步机制"></a>第十五章 原子变量与非阻塞同步机制</h2><h2 id="第十六章-Java内存模型"><a href="#第十六章-Java内存模型" class="headerlink" title="第十六章 Java内存模型"></a>第十六章 Java内存模型</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// for test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] generateRandomArray(<span class="hljs-type">int</span> maxSize, <span class="hljs-type">int</span> maxValue) &#123;<br>	<span class="hljs-comment">// Math.random()   [0,1)  </span><br>	<span class="hljs-comment">//N * Math.random() [0,N)</span><br>	<span class="hljs-comment">// (int)( N * Math.random())  [0, N-1]</span><br>	<span class="hljs-type">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[(<span class="hljs-type">int</span>) ((maxSize + <span class="hljs-number">1</span>) * Math.random())];<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;<br>		<span class="hljs-comment">// [-? , +?]</span><br>		arr[i] = (<span class="hljs-type">int</span>) ((maxValue + <span class="hljs-number">1</span>) * Math.random()) - (<span class="hljs-type">int</span>) (maxValue * Math.random());<br>	&#125;<br>	<span class="hljs-keyword">return</span> arr;<br>&#125;<br><br><span class="hljs-comment">// for test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] copyArray(<span class="hljs-type">int</span>[] arr) &#123;<br>	<span class="hljs-keyword">if</span> (arr == <span class="hljs-literal">null</span>) &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>	&#125;<br>	<span class="hljs-type">int</span>[] res = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[arr.length];<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;<br>		res[i] = arr[i];<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-comment">// 比较是否相等</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isEqual</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr1, <span class="hljs-type">int</span>[] arr2)</span> &#123;<br>	<span class="hljs-keyword">if</span> ((arr1 == <span class="hljs-literal">null</span> &amp;&amp; arr2 != <span class="hljs-literal">null</span>) || (arr1 != <span class="hljs-literal">null</span> &amp;&amp; arr2 == <span class="hljs-literal">null</span>)) &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (arr1 == <span class="hljs-literal">null</span> &amp;&amp; arr2 == <span class="hljs-literal">null</span>) &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (arr1.length != arr2.length) &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>	&#125;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; arr1.length; i++) &#123;<br>		<span class="hljs-keyword">if</span> (arr1[i] != arr2[i]) &#123;<br>			<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br><br><span class="hljs-comment">// f打印不相等的测试用例</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">printArray</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr)</span> &#123;<br>	<span class="hljs-keyword">if</span> (arr == <span class="hljs-literal">null</span>) &#123;<br>		<span class="hljs-keyword">return</span>;<br>	&#125;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;<br>		System.out.print(arr[i] + <span class="hljs-string">&quot; &quot;</span>);<br>	&#125;<br>	System.out.println();<br>&#125;<br><br><span class="hljs-comment">// for test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>	<span class="hljs-type">int</span> <span class="hljs-variable">testTime</span> <span class="hljs-operator">=</span> <span class="hljs-number">500000</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-variable">maxSize</span> <span class="hljs-operator">=</span> <span class="hljs-number">100</span>;<br>	<span class="hljs-type">int</span> <span class="hljs-variable">maxValue</span> <span class="hljs-operator">=</span> <span class="hljs-number">100</span>;<br>	<span class="hljs-type">boolean</span> <span class="hljs-variable">succeed</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; testTime; i++) &#123;<br>		<span class="hljs-type">int</span>[] arr1 = generateRandomArray(maxSize, maxValue);<br>		<span class="hljs-type">int</span>[] arr2 = copyArray(arr1);<br>		selectionSort(arr1);<br>		comparator(arr2);<br>		<span class="hljs-keyword">if</span> (!isEqual(arr1, arr2)) &#123;<br>			succeed = <span class="hljs-literal">false</span>;<br>			printArray(arr1);<br>			printArray(arr2);<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	System.out.println(succeed ? <span class="hljs-string">&quot;Nice!&quot;</span> : <span class="hljs-string">&quot;Fucking fucked!&quot;</span>);<br>	<span class="hljs-comment">//此时的随机数相等</span><br>	<span class="hljs-type">int</span>[] arr = generateRandomArray(maxSize, maxValue);<br>	printArray(arr);<br>	selectionSort(arr);<br>	printArray(arr);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h2><p>时间复杂度O(logN)， 砍一半然后看一眼。</p>
+<p>经常见到的类型就是在一个有序数组中开展二分法，有序不一定是所有问题求解的必要条件。<strong>只要能正确构建左右两侧的淘汰逻辑，就可以二分。（构建排他性，必能二分。）不一定要有序才能二分。</strong></p>
+<h2 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h2><p>相邻两数，谁大谁往右。</p>
+<h2 id="2-插入排序"><a href="#2-插入排序" class="headerlink" title="2.插入排序"></a>2.插入排序</h2><p>0-0位置有序，0-1位置有序，0-2位置有序。有序的排，新抓一张牌，然后洗牌。</p>
+<p>时间复杂度O(N) ~O（N^2）一定要用最差的情况来估计流程。大O本质上就是指最差情况。</p>
+<p>永远是自己盯着的数j，j+1就是眼睛永远盯着自己的数的左边的数。</p>
+
               
             </div>
             <hr/>
@@ -321,7 +323,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="category-chain-item">数据结构与算法</a>
   
   
 
@@ -336,7 +338,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%B8%93%E4%B8%9A%E4%B9%A6%E7%B1%8D/">#专业书籍</a>
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>
       
     </div>
   
@@ -348,8 +350,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Java并发编程实战</div>
-      <div>http://example.com/2022/05/04/Java并发编程实战/</div>
+      <div>复杂度、对数器、二分法</div>
+      <div>http://example.com/2022/05/11/复杂度、对数器、二分法/</div>
     </div>
     <div class="license-meta">
       
@@ -361,7 +363,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月4日</div>
+          <div>2022年5月11日</div>
         </div>
       
       
@@ -403,18 +405,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/05/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9AAgile-Cold-Starts-for-Scalable-Serverless/" title="论文阅读：Agile Cold Starts for Scalable Serverless">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">论文阅读：Agile Cold Starts for Scalable Serverless</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/04/hexo%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" title="hexo常见操作">
-                        <span class="hidden-mobile">hexo常见操作</span>
+                      <a href="/2022/05/10/%E5%90%91%E9%87%8F%E3%80%81%E7%9F%A9%E9%98%B5%E3%80%81%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" title="向量、矩阵、最小二乘法">
+                        <span class="hidden-mobile">向量、矩阵、最小二乘法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

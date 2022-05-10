@@ -24,7 +24,7 @@
 <meta property="og:description" content="数据结构与算法注意点和常见问题看过容易忘怎么解决？多看，多讲，自己手动实现出来！！ 看课+核心的两三句话，把每个核心的检验出来就行。 面试：1.白板  2.纸  3.txt 4.ide 题大：跟面试官聊，题大不是问题，不会聊是问题。和面试官聊写哪一部分的题。f()，g()，s()。 算法：带来资源的节省。 递归：找之前做过的题，来改，敏感度。提前见识这些模型。 面试官聊红黑树，恶趣味。聊的能力。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-09T14:43:32.000Z">
-<meta property="article:modified_time" content="2022-05-09T15:46:05.661Z">
+<meta property="article:modified_time" content="2022-05-10T16:07:26.094Z">
 <meta property="article:author" content="yyx">
 <meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary_large_image">
@@ -210,7 +210,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          301 字
+          450 字
         
       </span>
     
@@ -221,7 +221,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -282,7 +282,19 @@
 <p>对数器是什么？</p>
 <p>栈溢出？用<strong>对数器</strong>来搞。</p>
 <p>模数，中间结果拿long接着 2.中间结果提前拿long摸</p>
-<h1 id="复杂度、对数器、二分法"><a href="#复杂度、对数器、二分法" class="headerlink" title="复杂度、对数器、二分法"></a>复杂度、对数器、二分法</h1><h1 id="异或运算相关面试题"><a href="#异或运算相关面试题" class="headerlink" title="异或运算相关面试题"></a>异或运算相关面试题</h1><h1 id="一些基础的数据结构"><a href="#一些基础的数据结构" class="headerlink" title="一些基础的数据结构"></a>一些基础的数据结构</h1>
+<h1 id="异或运算相关面试题"><a href="#异或运算相关面试题" class="headerlink" title="异或运算相关面试题"></a>异或运算相关面试题</h1><p>异或 相同为0，不同为1。（无进位相加）</p>
+<p>同或 相同为1，不同为0。</p>
+<p>异或性质：</p>
+<ol>
+<li>异或满足交换律和结合律，结合律（因为是无进位相加，和1的个数有关）</li>
+<li>0^N &#x3D; N</li>
+<li>N^N &#x3D; 0</li>
+</ol>
+<h2 id="不用额外变量交换两个数"><a href="#不用额外变量交换两个数" class="headerlink" title="不用额外变量交换两个数"></a>不用额外变量交换两个数</h2><p>a和b是同一个位置的时候，会出错。因为指向的是同一块内存区域</p>
+<p>a &#x3D; a^b</p>
+<p>b &#x3D; b^a</p>
+<p>a &#x3D; a^b</p>
+<h1 id="一些基础的数据结构"><a href="#一些基础的数据结构" class="headerlink" title="一些基础的数据结构"></a>一些基础的数据结构</h1>
               
             </div>
             <hr/>
@@ -380,6 +392,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/05/10/Matpoltlib%E3%80%81Numpy%E3%80%81Pandas%E4%BD%BF%E7%94%A8/" title="Matpoltlib、Numpy、Pandas使用">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Matpoltlib、Numpy、Pandas使用</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
